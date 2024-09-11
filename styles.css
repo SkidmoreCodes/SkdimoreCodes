@@ -62,12 +62,31 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('ClubPic.jpg'); /* Path to your image */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent image repetition */
-    position: relative;
     overflow: hidden;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(50%) saturate(40%);
+}
+
+.hero-fg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50vh;
+    z-index: 2;
 }
 
 /* Ensure the text remains readable over the background */
