@@ -1,177 +1,203 @@
 /* ####### General Styles ####### */
 
 /* Reset margin and padding, set default font */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	background-color: #fff;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
+	display: none; /* Hides the scrollbar */
 }
 /* ####### Navbar Section ####### */
 
 /* Navbar container styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #093d31; /* Green PMS 3435 C */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #093d31; /* Green PMS 3435 C */
 }
 
 /* Logo styling */
 .navbar .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffba00; /* Orange PMS 116 C */
+	font-size: 2rem;
+	font-weight: bold;
+	color: #ffba00; /* Orange PMS 116 C */
 }
 
 /* Navigation bar list styling */
 .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
+	list-style: none;
+	display: flex;
+	margin: 0;
 }
 
 /* Individual navigation list items */
 .navbar ul li {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 /* Links within navigation bar */
 .navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: color 0.3s;
 }
 
 /* Change link color on hover */
 .navbar ul li a:hover {
-    color: #ffba00; /* Orange PMS 116 C hover effect */
+	color: #ffba00; /* Orange PMS 116 C hover effect */
 }
 
 /* ####### Hero Section ####### */
 
 /* Fullscreen hero section */
 .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .hero-bg {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    overflow: hidden;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(50%) saturate(40%);
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover; /* Ensure the image covers the entire section */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Prevent image repetition */
+	overflow: hidden;
+	object-fit: cover;
+	z-index: 1;
+	filter: brightness(50%) saturate(40%);
 }
 
-.hero-fg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 50vh;
-    z-index: 2;
+.hero-fg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	/* height: 50vh; */
+	z-index: 2;
 }
 
 /* Ensure the text remains readable over the background */
 .hero-text {
-    text-align: center;
-    color: #fff; /* White text to contrast against the background */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for better contrast */
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 70%;
+	text-align: center;
+	color: #fff; /* White text to contrast against the background */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.6
+	); /* Semi-transparent black background for better contrast */
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 70%;
 }
 
 /* Main heading in the hero section */
-.hero h1 {
-    font-size: 4rem;
-    color: #093d31; /* Green PMS 3435 C */
-    text-shadow: 2px 2px #ffba00; /* Orange text-shadow effect */
+.hero-header {
+    display: inline-block;
 }
 
-/* Highlighted span in hero heading */
-.hero h1 span {
-    color: #ffba00; /* Orange PMS 116 C */
-    text-shadow: 2px 2px #093d31; /* Orange text-shadow effect */
+/* Text for the heading */
+.hero-header h1 {
+    font-family: monospace;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid #f2ef13; 
+
+    animation: 
+        typing 2s steps(15),
+        cursor .4s step-end infinite alternate;
+
+	font-size: 4rem;
+
+    /* Make the text a gradient */
+    background-image: linear-gradient(43deg, #34eb61 20%, #f2ef13 45%);
+    background-clip: text;
+    color: transparent
 }
+
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+@keyframes typing {
+from {width: 0}
+}
+
 
 /* Supporting paragraphs in the hero section */
 .hero p {
-    font-size: 1.3rem;
-    color: #fafafa;
-    
-    padding-left: 12rem;
-    padding-right: 12rem;
+	font-size: 1.3rem;
+	color: #fafafa;
 
+	padding-left: 12rem;
+	padding-right: 12rem;
 }
 
 /* Call-to-action button */
 .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 0.8rem 2rem;
-    background-color: #ffba00; /* Orange PMS 116 C */
-    color: #fff;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: inline-block;
+	margin-top: 20px;
+	padding: 0.8rem 2rem;
+	background-color: #ffba00; /* Orange PMS 116 C */
+	color: #fff;
+	font-weight: bold;
+	border-radius: 10px;
+	text-decoration: none;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* CTA button hover effect */
 .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-5px);
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ####### Background Design Section ####### */
 
 /* Optional background styling for hero section, can be replaced with any image */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('path-to-your-node-background.jpg'); /* Add your own background image */
-    opacity: 0.1;
-    z-index: -1; /* Puts the background behind the text */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("path-to-your-node-background.jpg"); /* Add your own background image */
+	opacity: 0.1;
+	z-index: -1; /* Puts the background behind the text */
 }
 
 /* ####### Responsive Design ####### */
 
 /* For smaller screens, reduce the size of the text and adjust padding */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+	.hero h1 {
+		font-size: 2.5rem;
+	}
 
-    .navbar ul li {
-        margin-left: 10px;
-    }
+	.navbar ul li {
+		margin-left: 10px;
+	}
 
-    .cta-button {
-        padding: 8px 16px;
-    }
+	.cta-button {
+		padding: 8px 16px;
+	}
 }
 
 /* ####### How to Add More Sections ####### */
