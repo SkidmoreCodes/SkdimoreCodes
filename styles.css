@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
 	overflow: hidden;
 	object-fit: cover;
 	z-index: 1;
-	filter: brightness(50%) saturate(40%);
+	filter: brightness(90%) saturate(90%);
 }
 
 .hero-fg {
