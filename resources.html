@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="css/resources.css">
+</head>
+
+<body>
+    <!-- Main Resources Layout -->
+    <div class="resources-container">
+        <!-- Left Navbar -->
+        <nav class="left-navbar">
+            <h3 class="resource_navbar_title">Topics</h3>
+            <ul>
+                <li><a href="#" onclick="showSection('github')">GitHub</a></li>
+                <li><a href="#" onclick="showSection('html-css')">HTML & CSS</a></li>
+                <li class=""><a class="go_back_link" href="index.html">Go back!</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- GitHub Section -->
+            <section id="github" class="section">
+                <h2>GitHub Basics</h2>
+                <p>Learn how to create a GitHub account, clone repositories, make commits, and more.</p>
+                <ul>
+                    <li><a href="https://github.com/">Create a GitHub account</a></li>
+                    <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a></li>
+                    <li><a href="https://guides.github.com/activities/hello-world/">First GitHub repository</a></li>
+                    <li><a href="https://git-scm.com/docs/git-clone">Cloning repositories</a></li>
+                    <li><a href="https://git-scm.com/docs/git-commit">Making commits</a></li>
+                </ul>
+            </section>
+
+            <!-- HTML & CSS Section -->
+            <section id="html-css" class="section">
+                <h2>HTML & CSS Basics</h2>
+                <p>Understand the differences between HTML & CSS and how they work together to build websites.</p>
+
+                <h3>HTML Example</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+
+                <h3>CSS Example</h3>
+                <pre><code>body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #093d31; /* Green PMS 3435 C */
+}
+
+p {
+  color: #ffba00; /* Orange PMS 116 C */
+}
+                </code></pre>
+            </section>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/resources.js"></script>
+</body>
+
+</html>
